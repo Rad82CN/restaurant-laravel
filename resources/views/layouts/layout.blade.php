@@ -27,6 +27,7 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{ asset('web/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('web/css/jquery.toast.min.css') }}" rel="stylesheet" type="text/css">
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('web/css/style.css') }}" rel="stylesheet">
@@ -47,10 +48,10 @@
         <!-- Spinner End -->
 
         <!-- Navbar & Hero Start -->
-        @include('layouts.nav');
+        @include('layouts.nav')
         <!-- Navbar & Hero End -->
         
-        @yield('content');
+        @yield('content')
 
     </div>
 
@@ -68,6 +69,10 @@
 
     <!-- Template Javascript -->
     <script src="{{ asset('web/js/main.js') }}"></script>
+    <script src="{{ asset('web/js/jquery.toast.min.js') }}"></script>
+
+    @include('shared.success-msg')
+
 </body>
 
 </html>

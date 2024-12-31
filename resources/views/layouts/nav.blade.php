@@ -9,16 +9,20 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0 pe-4">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link">Service</a>
-                <a href="menu.html" class="nav-item nav-link">Menu</a>
-                <a href="cart.html" class="nav-item nav-link"><i class="fa-sharp fa-solid fa-cart-shopping"></i>Cart</a>
+                @auth()
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="service.html" class="nav-item nav-link">Service</a>
+                    <a href="menu.html" class="nav-item nav-link">Menu</a>
+                    <a href="cart.html" class="nav-item nav-link"><i class="fa-sharp fa-solid fa-cart-shopping"></i>Cart</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                @endauth
 
-              
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
-                <a href="login.html" class="nav-item nav-link">Login</a>
-                <a href="register.html" class="nav-item nav-link">Register</a>
+                @guest()
+                    <a href="login.html" class="nav-item nav-link">Login</a>
+                    <a href="{{ route('register') }}" class="nav-item nav-link">Register</a>
+                @endguest
+                
             </div>
         </div>
     </nav>
