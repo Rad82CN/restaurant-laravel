@@ -1,7 +1,6 @@
-@extends('layouts.layout');
+@extends('layouts.layout')
 
-@section('content');
-
+@section('content')
 
         <div class="container-xxl py-5 bg-dark hero-header mb-5">
             <div class="container my-5 py-5">

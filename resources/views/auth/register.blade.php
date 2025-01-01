@@ -1,9 +1,8 @@
-@extends('layouts.layout');
+@extends('layouts.layout')
 
-@section('content');
+@section('content')
 
 <body>
-    <div class="container-xxl bg-white p-0">
         <div class="container-xxl position-relative p-0">
             <div class="container-xxl py-5 bg-dark hero-header mb-5">
                 <div class="container text-center my-5 pt-5 pb-4">
@@ -17,7 +16,6 @@
                 </div>
             </div>
         </div>
-
 
         <!-- Service Start -->
             <div class="container">
@@ -71,6 +69,9 @@
                                
                                 <div class="col-md-12">
                                     <button type="submit" name="submit" class="btn btn-primary w-100 py-3">Register</button>
+                                </div>
+                                <div class="text-center mt-2">
+                                    <a href="{{ route('login') }}">Login here</a>
                                 </div>
                             </div>
                         </form>
@@ -149,21 +150,3 @@
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-</body>
-
-</html>

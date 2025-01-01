@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UserLoginRequest;
 use App\Http\Requests\UserRegisterRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -14,7 +15,7 @@ class AuthController extends Controller
     }
 
     public function store(UserRegisterRequest $request) {
-        // the validated data from the given form request
+        // the validated data from the given form request data
         $validated = $request->validated();
 
         User::create([
@@ -27,14 +28,27 @@ class AuthController extends Controller
     }
 
     public function login() {
-        //
+        return view('auth.login');
     }
 
-    public function authenticate() {
-        //
+    public function authenticate(UserLoginRequest $request) {
+        $validated = $request->validated();
+
+        // if the users imported data that is trying to login is valid
+        if(auth()->attempt($validated)) {
+            $request->session()->regenerate();
+
+            return redirect()->route('index')->with('success', 'Logged in successfully!');
+        }
     }
 
     public function logout() {
-        //
+        auth()->logout();
+
+        // regenrating/flushing session data and CSRF token
+        request()->session()->invalidate();
+        request()->session()->regenerateToken();
+
+        return redirect()->route('index')->with('success', 'Logged out successfully!');
     }
 }
