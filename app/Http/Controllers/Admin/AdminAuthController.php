@@ -13,9 +13,6 @@ class AdminAuthController extends Controller
     }
 
     public function authenticate(AdminLoginRequest $request) {
-        // Authorizing that the user is admin or not
-        // $this->authorize('adminAuth');
-
         $validated = $request->validated();
 
         // if the users imported data that is trying to login is valid

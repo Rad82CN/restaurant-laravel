@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
 class EnsureUserIsAdmin
@@ -15,8 +16,12 @@ class EnsureUserIsAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(!auth()->user()->is_admin) {
-            return redirect()->route('admin.login')->with('error', 'Dont have permission');
+        if (Auth::check()){
+            if(!auth()->user()->is_admin) {
+                return redirect()->route('admin.login')->with('error', 'Dont have permission!');
+            }
+        } else {
+            return redirect()->route('admin.login')->with('error', 'Dont have permission!');
         }
         
         return $next($request);

@@ -12,9 +12,6 @@ data-bs-theme="dark">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{{ route('admin.login') }}">Login</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin.register') }}">Register</a>
-                    </li>
                 @endguest
                 
                 @auth()
@@ -33,8 +30,14 @@ data-bs-theme="dark">
                     <li class="nav-item">
                         <a class="nav-link" href="">Orders</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Foods</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Foods
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{{ route('adminFoods.index') }}">Show Foods</a></li>
+                            <li><a class="dropdown-item" href="{{ route('adminFoods.create') }}">Create Foods</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="">Bookings</a>

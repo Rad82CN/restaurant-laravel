@@ -15,3 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [IndexController::class , 'index'])->name('index');
+
+// Food Routes
