@@ -12,7 +12,7 @@
                             <th scope="col">image</th>
                             <th scope="col">price</th>
                             <th scope="col">delete</th>
-                            <th scope="col">show</th>
+                            <th scope="col">edit</th>
                         </tr>
                     </thead>
                     @forelse ($foods as $food)
@@ -28,6 +28,9 @@
                                         @method('delete')   
                                         <button class="btn btn-danger btn-sm">Delete</button>
                                     </form>
+                                </td>
+                                <td>
+                                    <a href="{{ route('adminFoods.edit', $food->id) }}"><button class="btn btn-info btn-sm">Edit</button></a>
                                 </td>
                             </tr>
                         </tbody>
