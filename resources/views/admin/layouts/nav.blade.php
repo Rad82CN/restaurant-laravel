@@ -16,15 +16,15 @@ data-bs-theme="dark">
                 
                 @auth()
                     <li class="nav-item">
-                        <a class="nav-link" href="">Home</a>
+                        <a class="nav-link" href="{{ route('admin.index') }}">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Admins
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="">Show Admins</a></li>
-                            <li><a class="dropdown-item" href="">Create Admins</a></li>
+                            <li><a class="dropdown-item" href="{{ route('admins.index') }}">Show Admins</a></li>
+                            <li><a class="dropdown-item" href="{{ route('users.index') }}">Convert to Admin</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
