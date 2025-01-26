@@ -47,7 +47,7 @@
                         <div class="form-outline mb-4 mt-4">
                             <select name="category" class="form-select  form-control" aria-label="Default select example">
                                 <option value="breakfast">Breakfast</option>
-                                <option value="launch">Launch</option>
+                                <option value="lunch">Lunch</option>
                                 <option value="dinner">Dinner</option>
                             </select>
                         </div>

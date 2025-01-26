@@ -5,8 +5,8 @@
 use App\Http\Controllers\Admin\AdminAuthController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdminIndexController;
+use App\Http\Controllers\Admin\FoodAdminController;
 use App\Http\Controllers\Admin\UserAdminController;
-use App\Http\Controllers\FoodController;
 use Illuminate\Support\Facades\Route;
 
 // without admin middleware
@@ -21,7 +21,7 @@ Route::prefix('admin')->middleware('admin')->group(function() {
     Route::get('/index', [AdminIndexController::class , 'index'])->name('admin.index');
 
     // admin food routes
-    Route::resource('adminFoods', FoodController::class);
+    Route::resource('adminFoods', FoodAdminController::class);
 
     // admins routes
     Route::resource('admins', AdminController::class)->only('index', 'update');

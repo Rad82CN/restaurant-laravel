@@ -53,6 +53,10 @@
         
         @yield('content')
 
+        <!-- Footer Start -->
+        @include('layouts.footer')
+        <!-- Footer End -->
+
     </div>
 
     <!-- JavaScript Libraries -->

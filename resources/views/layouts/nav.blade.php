@@ -12,7 +12,7 @@
                 <a href="{{ route('index') }}" class="{{ (Route::is('index')) ? 'active' : '' }} nav-item nav-link">Home</a>
                 <a href="about.html" class="{{ (Route::is('about')) ? 'active' : '' }} nav-item nav-link">About</a>
                 <a href="service.html" class="{{ (Route::is('service')) ? 'active' : '' }} nav-item nav-link">Service</a>
-                <a href="menu.html" class="{{ (Route::is('menu')) ? 'active' : '' }} nav-item nav-link">Menu</a>
+                <a href="{{ route('foods.index') }}" class="{{ (Route::is('menu')) ? 'active' : '' }} nav-item nav-link">Menu</a>
                 @auth()
                     <a href="cart.html" class="{{ (Route::is('cart')) ? 'active' : '' }} nav-item nav-link"><i class="fa-sharp fa-solid fa-cart-shopping"></i>Cart</a>
                     <li class="nav-item dropdown">
