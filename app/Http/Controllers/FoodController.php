@@ -19,6 +19,8 @@ class FoodController extends Controller
     public function show($food) {
         $food = Food::findOrFail($food);
 
-        return view('', compact());
+        return view('foods.show-food-cart', [
+            'food' => $food,
+        ]);
     }
 }

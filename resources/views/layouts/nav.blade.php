@@ -12,9 +12,9 @@
                 <a href="{{ route('index') }}" class="{{ (Route::is('index')) ? 'active' : '' }} nav-item nav-link">Home</a>
                 <a href="about.html" class="{{ (Route::is('about')) ? 'active' : '' }} nav-item nav-link">About</a>
                 <a href="service.html" class="{{ (Route::is('service')) ? 'active' : '' }} nav-item nav-link">Service</a>
-                <a href="{{ route('foods.index') }}" class="{{ (Route::is('menu')) ? 'active' : '' }} nav-item nav-link">Menu</a>
+                <a href="{{ route('foods.index') }}" class="{{ (Route::is('foods.index')) ? 'active' : '' }} nav-item nav-link">Menu</a>
                 @auth()
-                    <a href="cart.html" class="{{ (Route::is('cart')) ? 'active' : '' }} nav-item nav-link"><i class="fa-sharp fa-solid fa-cart-shopping"></i>Cart</a>
+                    <a href="{{ route('cart.index') }}" class="{{ (Route::is('cart.index')) ? 'active' : '' }} nav-item nav-link"><i class="fa-sharp fa-solid fa-cart-shopping"></i>Cart</a>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             {{ Auth::user()->username }}

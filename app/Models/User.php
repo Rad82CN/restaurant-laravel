@@ -42,4 +42,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function foods() {
+        return $this->belongsToMany(Food::class, 'user_food', 'user_id')->withTimestamps();
+    }
 }

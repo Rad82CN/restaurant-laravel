@@ -17,6 +17,10 @@ class Food extends Model
         'category',
     ];
 
+    public function users() {
+        return $this->belongsToMany(User::class, 'user_food', 'food_id')->withTimestamps();
+    }
+
     public function getImageURL() {
         if($this->image) {
             return url('storage/' . $this->image);

@@ -76,6 +76,7 @@
     <script src="{{ asset('web/js/jquery.toast.min.js') }}"></script>
 
     @include('shared.success-msg')
+    @include('shared.error-msg')
 
 </body>
 
