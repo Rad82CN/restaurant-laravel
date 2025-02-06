@@ -37,6 +37,7 @@ class UserLoginRequest extends FormRequest
 
             // exists message
             'email.exists' => 'inserted email/password is not valid',
+            'password.exists' => 'inserted email/password is not valid',
 
             // email message
             'email.email' => 'please provide a valid email address',

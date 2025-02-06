@@ -40,6 +40,10 @@ class AuthController extends Controller
 
             return redirect()->route('index')->with('success', 'Logged in successfully!');
         }
+
+        return redirect()->route('login')->withErrors([
+            'password' => 'This password address is not correct!',
+        ]);
     }
 
     public function logout() {

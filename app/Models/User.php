@@ -46,4 +46,8 @@ class User extends Authenticatable
     public function foods() {
         return $this->belongsToMany(Food::class, 'user_food', 'user_id')->withTimestamps();
     }
+
+    public function bookings() {
+        return $this->hasMany(Booking::class)->latest();
+    }
 }

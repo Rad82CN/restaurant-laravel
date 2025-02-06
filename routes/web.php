@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\FoodController;
 use App\Http\Controllers\IndexController;
@@ -30,4 +31,7 @@ Route::middleware('auth')->group(function() {
         Route::post('/remove/{food}', [CartController::class , 'remove'])->name('cart.remove');
         Route::post('/checkout', [CartController::class , 'checkout'])->name('cart.checkout');
     });
+
+    // booking routes
+    Route::resource('booking', BookingController::class)->except('show');
 });

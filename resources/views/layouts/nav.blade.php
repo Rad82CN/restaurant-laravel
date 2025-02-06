@@ -10,8 +10,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0 pe-4">
                 <a href="{{ route('index') }}" class="{{ (Route::is('index')) ? 'active' : '' }} nav-item nav-link">Home</a>
-                <a href="about.html" class="{{ (Route::is('about')) ? 'active' : '' }} nav-item nav-link">About</a>
-                <a href="service.html" class="{{ (Route::is('service')) ? 'active' : '' }} nav-item nav-link">Service</a>
+                <a href="{{ route('booking.create') }}" class="{{ (Route::is('booking.create')) ? 'active' : '' }} nav-item nav-link">Book a Table</a>
                 <a href="{{ route('foods.index') }}" class="{{ (Route::is('foods.index')) ? 'active' : '' }} nav-item nav-link">Menu</a>
                 @auth()
                     <a href="{{ route('cart.index') }}" class="{{ (Route::is('cart.index')) ? 'active' : '' }} nav-item nav-link"><i class="fa-sharp fa-solid fa-cart-shopping"></i>Cart</a>
@@ -21,7 +20,6 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="">Bookings</a></li>
-                            <li><a class="dropdown-item" href="">Orders</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li>
                                 <form action="{{ route('logout') }}" method="post">
