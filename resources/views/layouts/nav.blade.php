@@ -19,7 +19,7 @@
                             {{ Auth::user()->username }}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="">Bookings</a></li>
+                            <li><a class="dropdown-item" href="{{ route('booking.index') }}">Bookings</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li>
                                 <form action="{{ route('logout') }}" method="post">

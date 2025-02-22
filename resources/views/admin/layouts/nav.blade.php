@@ -40,7 +40,7 @@ data-bs-theme="dark">
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Bookings</a>
+                        <a class="nav-link" href="{{ route('adminBookings.index') }}">Bookings</a>
                     </li>
                     <li class="nav-item">
                         <form action="{{ route('logout') }}" method="POST">
